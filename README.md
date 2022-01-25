@@ -10,7 +10,7 @@ Star⭐ the repo if you like what you see😉.
 
 ## 📸 ScreenShots
 
-<img src="ss/1.png" width="300">/>
+<img src="ss/1.png" width="300">
 
 | 2 | 3| 4 | 5|
 |------|-------|
