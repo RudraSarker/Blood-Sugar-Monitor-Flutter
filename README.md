@@ -12,14 +12,16 @@ Star⭐ the repo if you like what you see😉.
 
 <img src="ss/1.png" width="300">
 
-| 2 | 3| 4 | 5|
+| 2 | 3 | 4 |
 |------|-------|
-|<img src="ss/2.png" width="200">|<img src="ss/3.png" width="200">|
-|<img src="ss/4.png" width="200">|<img src="ss/5.png" width="200">|
+|<img src="ss/2.png" width="200">|<img src="ss/3.png" width="200">|<img src="ss/4.png" width="200">|
 
-| 6 | 7| 8 | 9|
+| 5 | 6 | 7 |
 |------|-------|
-|<img src="ss/6.png" width="200">|<img src="ss/7.png" width="200">|
+|<img src="ss/5.png" width="200">|<img src="ss/6.png" width="200">|<img src="ss/7.png" width="200">|
+
+| 8 | 9 |
+|------|-------|
 |<img src="ss/8.png" width="200">|<img src="ss/9.png" width="200">|
 
 
