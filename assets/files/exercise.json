@@ -1,0 +1,38 @@
+{
+	"Exercise": [{
+			"id": 1,
+			"name": "Walking"
+		},
+		{
+			"id": 2,
+			"name": "Cycling"
+		},
+		{
+			"id": 3,
+			"name": "Swimming"
+		},
+		{
+			"id": 4,
+			"name": "Team sports"
+		},
+		{
+			"id": 5,
+			"name": "Aerobic dance"
+		},
+		{
+			"id": 6,
+			"name": "Weight lifting"
+		},
+		{
+			"id": 7,
+			"name": "Resistance band exercises"
+		},
+		{
+			"id": 8,
+			"name": "Calisthenics"
+		}, {
+			"id": 9,
+			"name": "Yoga"
+		}
+	]
+}

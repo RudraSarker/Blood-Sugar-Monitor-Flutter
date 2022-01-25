@@ -1,0 +1,48 @@
+{
+	"foods": [{
+			"id": 1,
+			"name": "Fruits",
+			"items": ["Apples with peel-1 small (120g)", "Banana-1 small (80g)", "Grapes-15 small(100g)", "Guava-2 large (300g)", "Mango-1 small (100g)", "Orange-1 medium (180g)", "Papya- 1 cup(175 cups)", "Watermelon-1 slice (250g)", "Strawberries-(300g)", "Pineapple-(125g)"]
+		},
+		{
+			"id": 2,
+			"name": "Vegitables",
+			"items": ["spinach", "Collard greens", "Kale", "Cabbage", "Broccoli", "Bok choy"]
+		},
+		{
+			"id": 3,
+			"name": "Whole Grains",
+			"items": ["Brown rice", "Whole grain bread", "Whole grain pasta", "Buckwheat", "Oats"]
+		},
+		{
+			"id": 4,
+			"name": "Fatty Fish",
+			"items": ["Salmon", "Mackerel", "Sardines", "Albacore tuna", "Herring", "Trout"]
+		},
+		{
+			"id": 5,
+			"name": "Beans",
+			"items": ["Kidney", "Pinto", "Black beans", "Navy", "Adzuki"]
+		},
+		{
+			"id": 6,
+			"name": "Nuts",
+			"items": ["Almonds", "Walnuts", "Cashews", "Pistachios", "Peanuts"]
+		},
+		{
+			"id": 7,
+			"name": "Spices",
+			"items": ["Cinnamon", "Fenugreek", "Ginger", "Turmeric", "Garlic", "Curry leaves"]
+		},
+		{
+			"id": 8,
+			"name": "Oil",
+			"items": ["Coriander seed", "Lemon balm", "Clove bud", "Black seed", "Olive oil"]
+		},
+		{
+			"id": 9,
+			"name": "Chocolate",
+			"items": ["Dark chocolate"]
+		}
+	]
+}
