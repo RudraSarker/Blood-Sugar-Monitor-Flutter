@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "816507233953",
+    "project_id": "blood-sugar-monitor",
+    "storage_bucket": "blood-sugar-monitor.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:816507233953:android:31cb27788c90d4ad88f2e0",
+        "android_client_info": {
+          "package_name": "com.exampleapp.blood_sugar_monitor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "816507233953-4jjk2anei618v9k78dtmh9lqduap5b3p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBI25lvjt4XiUUPmKlE7l0igyca53kCyZ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "816507233953-4jjk2anei618v9k78dtmh9lqduap5b3p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
