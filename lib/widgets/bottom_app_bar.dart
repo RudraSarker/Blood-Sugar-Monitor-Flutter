@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
+
+import '../models/auth_service_model.dart';
 
 class myBottomAppBar extends StatelessWidget {
   // const myBottomAppBar({
@@ -18,6 +21,7 @@ class myBottomAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final authService = Provider.of<AuthService>(context);
     return BottomAppBar(
       //shape: shape,
       color: const Color(0xFFF53935),
@@ -33,9 +37,11 @@ class myBottomAppBar extends StatelessWidget {
               onPressed: () {},
             ),
             IconButton(
-              tooltip: 'Search',
-              icon: const Icon(Icons.local_drink),
-              onPressed: () {},
+              tooltip: 'Sign Out',
+              icon: const Icon(Icons.logout),
+              onPressed: () async {
+                await authService.signOut();
+              },
             ),
             // IconButton(
             //   tooltip: 'Favorite',

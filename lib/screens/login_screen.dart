@@ -1,3 +1,4 @@
+import 'package:blood_sugar_monitor/models/auth_service_model.dart';
 import 'package:blood_sugar_monitor/screens/home_screen.dart';
 import 'package:blood_sugar_monitor/screens/registration_screen.dart';
 import 'package:blood_sugar_monitor/widgets/dynamic_text_form_field.dart';
@@ -5,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:blood_sugar_monitor/utilities/constants.dart';
 import 'package:form_field_validator/form_field_validator.dart';
+import 'package:provider/provider.dart';
 
 class LoginScreen extends StatefulWidget {
   static String route = "login";
@@ -19,7 +21,6 @@ class _LoginScreenState extends State<LoginScreen> {
   GlobalKey<FormState> formKey = GlobalKey<FormState>();
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
-
   Widget _buildForgotPasswordBtn() {
     return Container(
       alignment: Alignment.centerRight,
@@ -61,16 +62,19 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
-  Widget _buildLoginBtn() {
+  Widget _buildLoginBtn(authService, context) {
+    final authService = Provider.of<AuthService>(context);
+
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 25.0),
       width: double.infinity,
       child: RaisedButton(
         elevation: 5.0,
-        onPressed: () {
+        onPressed: () async {
           if (formKey.currentState!.validate()) {
-            print(emailController.text);
-            Navigator.popAndPushNamed(context, HomeScreen.route);
+            await authService.signInWithEmailAndPassword(
+                emailController.text, passwordController.text);
+            //Navigator.popAndPushNamed(context, HomeScreen.route);
           }
         },
         padding: const EdgeInsets.all(15.0),
@@ -188,7 +192,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   final passwordValidator = MultiValidator([
     RequiredValidator(errorText: 'password is required'),
-    MinLengthValidator(8, errorText: 'password must be at least 8 digits long'),
+    MinLengthValidator(6, errorText: 'password must be at least 6 digits long'),
     PatternValidator(r'(?=.*?[#?!@$%^&*-])',
         errorText: 'passwords must have at least one special character')
   ]);
@@ -200,6 +204,8 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final authService = Provider.of<AuthService>(context);
+
     return Scaffold(
       body: AnnotatedRegion<SystemUiOverlayStyle>(
         value: SystemUiOverlayStyle.light,
@@ -268,7 +274,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         _buildForgotPasswordBtn(),
                         _buildRememberMeCheckbox(),
-                        _buildLoginBtn(),
+                        _buildLoginBtn(authService, context),
                         _buildSignInWithText(),
                         _buildSocialBtnRow(),
                         _buildSignupBtn(),

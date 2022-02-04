@@ -5,6 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:blood_sugar_monitor/utilities/constants.dart';
 import 'package:form_field_validator/form_field_validator.dart';
+import 'package:provider/provider.dart';
+
+import '../models/auth_service_model.dart';
 
 class RegistrationScreen extends StatefulWidget {
   static String route = "registration";
@@ -88,16 +91,20 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
     );
   }
 
-  Widget _buildSignupBtn() {
+  Widget _buildSignupBtn(context) {
+    final authService = Provider.of<AuthService>(context);
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 25.0),
       width: double.infinity,
       child: RaisedButton(
         elevation: 5.0,
-        onPressed: () {
+        onPressed: () async {
           if (formKey.currentState!.validate()) {
-            Navigator.popAndPushNamed(context, HomeScreen.route);
+            await authService.createUserWithEmailAndPassworder(
+                emailController.text, passController.text);
+            //Navigator.popAndPushNamed(context, HomeScreen.route);
           }
+          Navigator.pop(context);
         },
         padding: const EdgeInsets.all(15.0),
         shape: RoundedRectangleBorder(
@@ -291,7 +298,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                           height: 10.0,
                         ),
                         _buildGenderDropdown(),
-                        _buildSignupBtn(),
+                        _buildSignupBtn(context),
                         _buildGotoLoginBtn(),
                       ],
                     ),
